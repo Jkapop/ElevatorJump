@@ -3,5 +3,5 @@
 .DS_Store
 __pycache__/
 .idea/
-.mp3
-.MP3
+*.mp3
+*.MP3
