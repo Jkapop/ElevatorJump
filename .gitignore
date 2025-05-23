@@ -1,0 +1,5 @@
+# File types/directories to ignore
+.venv/
+.DS_Store
+__pycache__/
+.idea/
