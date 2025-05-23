@@ -11,9 +11,13 @@ base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
 
 pygame.init()
 pygame.mixer.init()
-pygame.mixer.music.load(os.path.join(base_path, 'assets', "elevator_music.mp3"))
-pygame.mixer.music.set_volume(0.5)
-pygame.mixer.music.play(-1)  # loop forever
+try:
+    pygame.mixer.music.load(os.path.join(base_path, 'assets', "elevator_music.mp3"))
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(-1)  # loop forever
+except pygame.error as e:
+    print(f"Error loading music: {e}")
+    print("Make sure the elevator_music.mp3 file is in the assets folder.")
 
 
 
